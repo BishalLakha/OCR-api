@@ -20,6 +20,7 @@ class OCR(Resource):
     def post(self,image):
         try:
             file = request.files['image']
+
             f = os.path.join(OCR.path, file.filename)
             file.save(f)
 
